@@ -1,0 +1,46 @@
+name: Refresh SlaveVoyages data
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: Exact official SlaveVoyages CSV URL
+        required: false
+        type: string
+  schedule:
+    - cron: "17 3 1 * *"
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Resolve source URL
+        id: source
+        env:
+          INPUT_URL: ${{ inputs.source_url }}
+          REPO_URL: ${{ vars.SV_SOURCE_URL }}
+        run: |
+          URL="${INPUT_URL:-$REPO_URL}"
+          test -n "$URL"
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+      - name: Build authoritative release
+        env:
+          SV_SOURCE_URL: ${{ steps.source.outputs.url }}
+        run: |
+          python scripts/ingest_slavevoyages.py --url "$SV_SOURCE_URL"
+          python scripts/validate.py
+          python scripts/build_dataset.py
+          python scripts/build_indexes.py
+          python scripts/build_geography.py --csv data/raw/source.csv
+          python scripts/generate_manifest.py
+      - name: Commit release
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "data: refresh SlaveVoyages snapshot"
+          git push
