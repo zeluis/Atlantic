@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.1.0",
+  "source": "SlaveVoyages Trans-Atlantic Slave Trade Database",
+  "source_document": "SPSS Codebook 2023-11-06",
+  "source_document_url": "https://www.slavevoyages.org/documents/download/SPSS_Codebook_2023-11-06.pdf",
+  "identity": [
+    "voyageid"
+  ],
+  "fields": {
+    "voyageid": {
+      "source": "voyageid",
+      "type": "integer",
+      "required": true
+    },
+    "shipname": {
+      "source": "shipname",
+      "type": "string"
+    },
+    "national": {
+      "source": "national",
+      "type": "string"
+    },
+    "natinimp": {
+      "source": "natinimp",
+      "type": "string",
+      "imputed": true
+    },
+    "placcons": {
+      "source": "placcons",
+      "type": "string"
+    },
+    "yrcons": {
+      "source": "yrcons",
+      "type": "integer"
+    },
+    "placreg": {
+      "source": "placreg",
+      "type": "string"
+    },
+    "yrreg": {
+      "source": "yrreg",
+      "type": "integer"
+    },
+    "rig": {
+      "source": "rig",
+      "type": "string"
+    },
+    "tonnage": {
+      "source": "tonnage",
+      "type": "number"
+    },
+    "yearaf": {
+      "source": "yearaf",
+      "type": "integer"
+    },
+    "yearam": {
+      "source": "yearam",
+      "type": "integer"
+    },
+    "yeardep": {
+      "source": "yeardep",
+      "type": "integer"
+    },
+    "majbyimp": {
+      "source": "majbyimp",
+      "type": "string",
+      "imputed": true
+    },
+    "mjbyptimp": {
+      "source": "mjbyptimp",
+      "type": "string",
+      "imputed": true
+    },
+    "mjselimp": {
+      "source": "mjselimp",
+      "type": "string",
+      "imputed": true
+    },
+    "mjselimp1": {
+      "source": "mjselimp1",
+      "type": "string",
+      "imputed": true
+    },
+    "tslavesd": {
+      "source": "tslavesd",
+      "type": "number"
+    },
+    "slaximp": {
+      "source": "slaximp",
+      "type": "number",
+      "imputed": true
+    },
+    "slaarriv": {
+      "source": "slaarriv",
+      "type": "number"
+    },
+    "slamimp": {
+      "source": "slamimp",
+      "type": "number",
+      "imputed": true
+    },
+    "voyage_outcome": {
+      "source": "voyage_outcome",
+      "type": "string"
+    },
+    "captain": {
+      "source": "captain",
+      "type": "string"
+    },
+    "crew": {
+      "source": "crew",
+      "type": "number"
+    },
+    "source": {
+      "source": "source",
+      "type": "string"
+    }
+  },
+  "missing_values": [
+    "",
+    "NA",
+    "N/A",
+    "NULL",
+    ".",
+    "-99",
+    "-999"
+  ],
+  "source_download": "tastdb-exp-2019.csv",
+  "source_download_url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv"
+}

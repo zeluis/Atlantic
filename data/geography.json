@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.5.0",
+  "source": "SlaveVoyages geographic appendix / codebook",
+  "status": "bootstrap coordinates only; production port labels/coordinates must be populated from authoritative codebook mapping",
+  "broad_africa_regions": [
+    "Senegambia",
+    "Sierra Leone",
+    "Windward Coast",
+    "Gold Coast",
+    "Bight of Benin",
+    "Bight of Biafra",
+    "West-central Africa",
+    "South-east Africa",
+    "Region cannot be identified"
+  ],
+  "note": "Numeric/string geographic codes are intentionally not guessed. The ingestion pipeline preserves source codes until an authoritative codebook mapping is installed.",
+  "ports": [
+    {
+      "id": "demo-luanda",
+      "name": "Luanda",
+      "lat": -8.84,
+      "lon": 13.23,
+      "broad": "West-central Africa"
+    },
+    {
+      "id": "demo-elmina",
+      "name": "Elmina",
+      "lat": 5.08,
+      "lon": -1.35,
+      "broad": "Gold Coast"
+    },
+    {
+      "id": "demo-bahia",
+      "name": "Bahia",
+      "lat": -12.97,
+      "lon": -38.5,
+      "broad": "Brazil"
+    },
+    {
+      "id": "demo-havana",
+      "name": "Havana",
+      "lat": 23.11,
+      "lon": -82.37,
+      "broad": "Caribbean"
+    },
+    {
+      "id": "demo-charleston",
+      "name": "Charleston",
+      "lat": 32.78,
+      "lon": -79.93,
+      "broad": "Mainland North America"
+    }
+  ]
+}
