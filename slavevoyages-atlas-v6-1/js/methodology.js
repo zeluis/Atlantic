@@ -1,0 +1,4 @@
+(()=>{const d={embarked:['Embarked captives','TSLAVESD / SLAXIMP','Documented and imputed measures remain distinct.'],arrived:['Disembarked captives','SLAARRIV / SLAMIMP','Documented and imputed measures remain distinct.'],loss:['Derived loss rate','Dashboard-derived','Calculated from selected embarked and arrived values.']};
+const e=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+function show(k,r,m){const p=document.querySelector('.methodology-panel');if(!p)return;const x=d[k]||d.embarked;p.hidden=false;document.getElementById('methodologyBody').innerHTML=`<dl class="method-grid"><dt>Measure</dt><dd>${e(x[0])}</dd><dt>Source variable(s)</dt><dd><code>${e(x[1])}</code></dd><dt>Rule</dt><dd>${e(x[2])}</dd><dt>Filtered voyages</dt><dd>${Number(r?.count||0).toLocaleString()}</dd><dt>Dataset release</dt><dd>${e(m?.dataset_version||m?.application_version||'unknown')}</dd></dl>`}
+window.SVMethodology={show}})();

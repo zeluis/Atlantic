@@ -1,0 +1,78 @@
+{
+  "dataset": "Trans-Atlantic Slave Trade Database \u2014 bootstrap",
+  "upstream": "SlaveVoyages",
+  "status": "v0.8 chunked production delivery scaffold; bootstrap data until refresh workflow runs",
+  "schema_version": "1.0.0",
+  "artifacts": {
+    "estimates-manifest.json": {
+      "bytes": 188,
+      "sha256": "5180a57c978a5ed53f196689d0106bfe3831b7acd8ff2c4a0560970964ed5bb3"
+    },
+    "geography.json": {
+      "bytes": 1341,
+      "sha256": "560ae60de439fd3464a5ae89d54e23e0b7bcb13b95043c1e5095a4e774e19cad"
+    },
+    "metrics.json": {
+      "bytes": 821,
+      "sha256": "e6de5edc25ed51e6bae5634eea32927bf4cfca406a0daf8112892d965844c1a7"
+    },
+    "regions.json": {
+      "bytes": 96,
+      "sha256": "54a745e287dacf0b948fe9debbfd477432bf0c526e540a7af43860dd81ea9507"
+    },
+    "routes.json": {
+      "bytes": 566,
+      "sha256": "99b6e0ac71712f6485981e5b4b37c6042df66261d979d871f4045be09cfa8339"
+    },
+    "schema.json": {
+      "bytes": 2600,
+      "sha256": "7282e9d767b955cb11a37d7583dfd423d16d4c291d19393821e46081a48f9517"
+    },
+    "source.json": {
+      "bytes": 822,
+      "sha256": "caa5667a050bc16893a20013f9d3b5a0beff0bd1e59b4ce5d3c3429917044cea"
+    },
+    "timeline.json": {
+      "bytes": 28,
+      "sha256": "993c7f13439769bcc38c344d0f699ae5ba298820a05d6df54158d82c9a3bba91"
+    },
+    "voyages.json": {
+      "bytes": 590,
+      "sha256": "f94f4cd1fb10b9488b0555106689728bfbacc8313cd8f796a5b961f9134ad46b"
+    }
+  },
+  "ui_version": "0.8.0",
+  "analytical_modes": [
+    "database",
+    "estimates-separate"
+  ],
+  "estimates_manifest": "estimates-manifest.json",
+  "delivery_version": "chunked-json-1",
+  "delivery": {
+    "format": "chunked-json",
+    "chunk_size": 2000,
+    "chunk_count": 1,
+    "chunks": [
+      {
+        "file": "chunks/voyages-0000.json",
+        "records": 1,
+        "bytes": 433,
+        "sha256": "fd34866f8013c179b5fee897accf22ad8a7c1cd320659529e07a60bc812f1faf"
+      }
+    ]
+  },
+  "record_count": 1,
+  "dataset_version": "ee78425929481721cb30c57bf96700fb6c3312a80c21c8a4be42c135d9a0667e",
+  "runtime_dependencies": 0,
+  "delivery_ready": true,
+  "validation": null,
+  "pipeline_version": "1.1.0",
+  "application_version": "1.2.0",
+  "architecture": "zero-runtime-dependency-github-pages-pwa",
+  "provenance_policy": "Raw source fields immutable; decoded and derived values are additive.",
+  "schema_artifacts": [
+    "data/schema.json",
+    "data/codebook/variable-registry.json",
+    "data/geography/codes.json"
+  ]
+}
