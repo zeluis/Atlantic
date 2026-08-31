@@ -1,6 +1,0 @@
-[
- {"id":"r1","origin":"Luanda","origin_id":"demo-luanda","destination":"Bahia","destination_id":"demo-bahia","voyages":3,"embarked":1200},
- {"id":"r2","origin":"Elmina","origin_id":"demo-elmina","destination":"Havana","destination_id":"demo-havana","voyages":1,"embarked":410},
- {"id":"r3","origin":"Elmina","origin_id":"demo-elmina","destination":"Charleston","destination_id":"demo-charleston","voyages":1,"embarked":190},
- {"id":"r4","origin":"Luanda","origin_id":"demo-luanda","destination":"Havana","destination_id":"demo-havana","voyages":1,"embarked":460}
-]
